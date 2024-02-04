@@ -1,11 +1,80 @@
+<style>
+    .portfolio__header{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    height: 80px;
+}
+.portfolio__nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.portfolio__nav *{
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+.portfolio__list{
+    display: flex;
+    list-style: none;
+}
+.portfolio__link{
+    margin-left: 45px;
+    list-style: outside none none;
+}
+.portfolio__link a{
+    font-size: 25px;
+    font-family: var(--font-family-bold);
+    padding: .5em .8em;
+    color: var(--white-color);
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.portfolio__link a::before,
+.portfolio__link a::after{
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+.portfolio__link a::before{
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid var(--white-color);
+    border-right: 3px solid var(--white-color);
+    transform: translate(-100%, 50%);
+}
+
+.portfolio__link a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid var(--white-color);
+    border-left: 3px solid var(--white-color);
+    transform: translate(100%, -50%);
+  }
+
+.portfolio__link a:hover:before,
+.portfolio__link a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+</style>
+
 <header class="portfolio__header">
     <div class="portfolio__container">
         <nav class="portfolio__nav">
             <ul class="portfolio__list">
-                <li class="portfolio__link"><a href="#skills">Skills</a></li>
-                <li class="portfolio__link"><a href="#about">About</a></li>
-                <li class="portfolio__link"><a href="#">Home</a></li>
+                <li class="portfolio__link"><a href="/">Home</a></li>
                 <li class="portfolio__link"><a href="#projects">Projects</a></li>
+                <li class="portfolio__link"><a href="#about">About</a></li>
                 <li class="portfolio__link"><a href="#contact">Contact</a></li>
             </ul>
         </nav>

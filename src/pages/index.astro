@@ -1,33 +1,17 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../components/Banner.astro";
 ---
 
 <BaseLayout>
 	 <!-- header -->
-	 <header class="portfolio__header">
-        <div class="portfolio__container">
-            <nav class="portfolio__nav">
-                <ul class="portfolio__list">
-                    <li class="portfolio__link"><a href="#skills">Skills</a></li>
-                    <li class="portfolio__link"><a href="#about">About</a></li>
-                    <li class="portfolio__link"><a href="#">Home</a></li>
-                    <li class="portfolio__link"><a href="#projects">Projects</a></li>
-                    <li class="portfolio__link"><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <Header/>
     <!-- header -->
     <!-- main -->
     <main>
         <!-- banner -->
-        <section class="portfolio__banner-hero">
-            <div class="portfolio__container">
-                <div class="portfolio__title-box">
-                    <h1 class="portfolio__title" data-aos="fade-left" data-aos-offset="600" data-aos-easing="linear"><small>I'm Cristian Rojas</small><br/>Full Stack Developer</h1>
-                </div>
-            </div>
-        </section>
+        <Banner/>
         <!-- banner -->
                 <!-- Projects -->
                 <section class="portfolio__projects portfolio--mt-200" id="projects">
@@ -141,7 +125,7 @@ import BaseLayout from "../layouts/BaseLayout.astro"
         <!-- About me -->
     </main>
     <!-- main -->
-    <footer class="portfolio__footer portfolio--mt-200">
+    <footer id="contact" class="portfolio__footer portfolio--mt-200">
         <div class="portfolio__footer-box">
             <div class="portfolio__social-media-box">
                 <h2 class="portfolio__footer-title">Lets Say Hi!</h2>
