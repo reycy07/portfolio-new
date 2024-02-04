@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import Banner from '../components/Banner.astro'
 
 import '../styles/normalize.css';
 import '../styles/style.css';
@@ -18,7 +19,10 @@ import '../styles/style.css';
 		<!-- header -->
 		<!-- main -->
 			<main>
-				<slot/>
+				<!-- banner -->
+					<Banner/>
+				<!-- banner -->
+					<slot/>
 			</main>
 		<!-- main -->
 	</body>
